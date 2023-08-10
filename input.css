@@ -1,0 +1,6 @@
+/* same as globals.css in nextjs project */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* any custom css and classes here */
