@@ -4,3 +4,69 @@
 @tailwind utilities;
 
 /* any custom css and classes here */
+body {
+    background-image: url('../img/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-position: 90% -20%;
+}
+
+#cta {
+      background-image: url('../img/bg-simplify-section-desktop.svg');
+    background-repeat: no-repeat;
+    /* background-position-y: 100%; */
+
+}
+
+@media(max-width: 768px) {
+    body{
+        background-size: 500px;
+        background-position: 50px -50px;
+    }
+
+     #cta {
+       background-image: url('../img/bg-simplify-section-mobile.svg');
+    }
+}
+
+/* Hamburger btn */
+.mobile-menu-btn{
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    position:relative;
+    /* border: 1px solid red; */
+
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 4px;
+    background: #242d52;
+    transform: rotate(0);
+    transition:  all 0.5s;
+}
+.hamburger-middle{
+     transform: translateY(7px);
+}
+.hamburger-bottom{
+       transform: translateY(14px);
+}
+.open{
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .hamburger-middle {
+    display: none;
+}
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+
